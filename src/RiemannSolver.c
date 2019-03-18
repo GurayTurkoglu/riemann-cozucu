@@ -31,28 +31,28 @@ void main()
 	for (csayisi = 0; csayisi<1889; csayisi++ ) //1846 karakter boyunca loop atar.
 	{
 	 printf("-");
-     if (csayisi == 832){ //832. karaktere geldiðinde çalýþtýrýr ve iþlemler menüsünü yazar.
+     if (csayisi == 832){ //832. karaktere geldiÄŸinde Ã§alÄ±ÅŸtÄ±rÄ±r ve iÅŸlemler menÃ¼sÃ¼nÃ¼ yazar.
 	 	printf("||-----ISLEMLER-----||");
 	 }
 	 if (csayisi == 890){
 	 	printf("|| A-) INTEGRAL COZ ||"); //58 karakter sonra ilk secenegi yazdirir.
 	 }
 	 if (csayisi == 948){
-	 	printf("|| B-) DOSYADAN COZ ||"); //2. seçenek
+	 	printf("|| B-) DOSYADAN COZ ||"); //2. seÃ§enek
 	 }
 	 if (csayisi == 1006){
-	 	printf("|| C-) CIKIS        ||"); //3. seçenek
+	 	printf("|| C-) CIKIS        ||"); //3. seÃ§enek
 	 }
 	}	
 	
-	secim = getch(); //seçim belirle
+	secim = getch(); //seÃ§im belirle
 	system("cls"); //konsolu temizle
 	
 	//menu buyuk ve kucuk harflere duyarlidir.
 	switch(secim)
 	{
 	 case 'A': 
-	 case 'a':  //integral fonksiyonuna yönlendirir.
+	 case 'a':  //integral fonksiyonuna yÃ¶nlendirir.
 		integralcoz();
 	    
 	 case 'B':
@@ -63,7 +63,7 @@ void main()
 	 case 'c':
 	 	exit(0);
 	 	
-	 default: //tanýmlanmayan durumlarda yonlendirir.
+	 default: //tanÄ±mlanmayan durumlarda yonlendirir.
 	 	system("cls");
 	 	printf("Giris Gecerli Degil.");
 	 	Sleep(250); //1 saniye ara.
@@ -90,7 +90,7 @@ void integralcoz()
     printf("Alt limit: "); //alt limit girisi
 	scanf("%d",&altlim); 
 	
-	printf("Ust limit: "); //üst limit girisi
+	printf("Ust limit: "); //Ã¼st limit girisi
 	scanf("%d",&ustlim);
 	
 	printf("Diktortgen sayisi: "); //kutu sayisi girisi
@@ -113,12 +113,12 @@ void cozucu(int altlim, int ustlim, int dsayisi)
         main();
 	}
 	
-	deltax = (floor(ustlim) - floor(altlim))/(floor(dsayisi)); //deltax i tanimlar ve üst limit ve alt limit degerlerinin isleme sokulabilmesi icin integerleri floor ile çevirir.
+	deltax = (floor(ustlim) - floor(altlim))/(floor(dsayisi)); //deltax i tanimlar ve Ã¼st limit ve alt limit degerlerinin isleme sokulabilmesi icin integerleri floor ile Ã§evirir.
 	
 	int n; //dongu sayisini gosterir
 	n = 0;
 		
-	for (x = floor(ustlim); x >= floor(altlim); x = x-deltax) //x deðeri alt limite deltax çýkararak yaklaþýr. 
+	for (x = floor(ustlim); x >= floor(altlim); x = x-deltax) //x deÄŸeri alt limite deltax Ã§Ä±kararak yaklaÅŸÄ±r. 
 	{
 	  printf("\n");
 	  printf("-----------------------\n");
@@ -129,8 +129,8 @@ void cozucu(int altlim, int ustlim, int dsayisi)
        kayit = fopen("noktalar.txt", "a+"); //Kayit dosyasini "append" modunda acar.
 	  }
 	  
-	  printf("Delta X: %f\n",deltax); //deltax çýktýsý
-	  printf("X: %f\n",x); //x deðeri ciktisi
+	  printf("Delta X: %f\n",deltax); //deltax Ã§Ä±ktÄ±sÄ±
+	  printf("X: %f\n",x); //x deÄŸeri ciktisi
 	  printf("Diktortgen Sayisi: %d\n",n); //diktortgen sayisi ciktisi
 	  
 	  //DIKDORTGEN OLUSTURMA
@@ -141,7 +141,7 @@ void cozucu(int altlim, int ustlim, int dsayisi)
 	   fprintf(kayit, "%f %f\n", x,yval);  //dosyaya yazdirir.
 	   printf("Sonuc: %.20f\n",sonuc);
 	   
-	   //if (n == dsayisi || n == dsayisi-1) //dikdorgen sayisi sona vardiginda sonucu yazdirir.
+	   //if (n == dsayisi || n == dsayisi-1) //islem sona erdiginde sonucu yazdirir.
 	   //{
 	  	//printf("Sonuc: %.20f\n",sonuc);
 	  	//fclose(kayit); //dosyayi kapat.
